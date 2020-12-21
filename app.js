@@ -5,8 +5,8 @@ let Personne = function (sonNom, sonPrenom, sonAge, sonSexe) {
     this.sexe = sonSexe;
 
     this.NomPrenom = function (nouveauNom, nouveauPrenom) {
-        this.nom = nouveauNom;
-        this.prenom = nouveauPrenom;
+        sonNom = nouveauNom;
+        sonPrenom = nouveauPrenom;
     }
 
     this.getInformation = function() {
@@ -32,7 +32,7 @@ let divMethode2 = document.getElementById("methode2");
 divMethode1.innerHTML = John.getInformation();
 John.NomPrenom("Chirac", "Patrick");
 divMethode2.innerHTML = John.getInformation();
-console.log(John);
+
 
 
 
@@ -45,3 +45,10 @@ divProp1Bis.innerHTML = Harry.nom;
 divProp2Bis.innerHTML = Harry.prenom;
 divProp3Bis.innerHTML = Harry.age;
 divProp4Bis.innerHTML = Harry.sexe;
+
+let divMethode1Bis = document.getElementById("p2methode1");
+let divMethode2Bis = document.getElementById("p2methode2");
+
+divMethode1Bis.innerHTML = Harry.getInformation();
+Harry.NomPrenom("Weasley", "Ron");
+divMethode2Bis.innerHTML = Harry.getInformation();
